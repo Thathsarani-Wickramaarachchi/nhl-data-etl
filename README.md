@@ -3,6 +3,6 @@ This repository contains a project focused on building a data warehousing, speci
 
 # This poject has two parts
 1. building the DW
-https://drive.google.com/file/d/1sBkmRcDhQ05NAue5Mk6-vBqcmsYco0Nu/view?usp=sharing
+https://drive.google.com/drive/folders/1L1GlZm8q9L28NGsfwbQyuFk-9IGj4anZ?usp=sharing
 3. analyising data using the DW
-https://drive.google.com/file/d/1RDthnUz7PprSjh625pp--BACofMNZRTh/view?usp=sharing
+https://drive.google.com/drive/folders/1XoMBOMqrhzGZXUMmTEUF_yLCB458iu8Q?usp=sharing
