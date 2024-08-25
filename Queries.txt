@@ -1,0 +1,26 @@
+SELECT t.TeamName, p.GoalsAway, d.Year
+FROM     FactPlay AS p INNER JOIN
+                  DimDate AS d ON p.PlayDateKey = d.DateKey INNER JOIN
+                  DimTeam AS t ON p.AwayTeamID = t.TeamID
+GROUP BY t.TeamName, p.GoalsAway, d.Year
+HAVING (p.GoalsAway > 5000)
+
+
+SELECT g.Venue, g.Season, p.HomeGoals, p.AwayGoals
+FROM dbo.Factplay p, dbo.DimGame g
+WHERE p.GameID = g.GameID 
+
+SELECT r.FirstNmae + r.LastName AS PlayerName, p.GameID, r.PrimaryPosition
+FROM dbo.Factplay p, dbo.DimPlayer r
+WHERE p.PlayerID = r.PlayerID
+
+
+SELECT r.Nationality, p.PlayerID, d.Year
+FROM dbo.Factplay p, dbo.DimPlayer r, dbo.DimDate d
+WHERE p.PlayerID = r.PlayerID and p.PlayDateKey = d.DateKey
+
+SELECT t.TeamName, p.GoalsHome, d.Year, d.Monthname
+FROM     FactPlay AS p INNER JOIN
+                  DimDate AS d ON p.PlayDateKey = d.DateKey INNER JOIN
+                  DimTeam AS t ON p.AwayTeamID = t.TeamID
+WHERE p.GoalsHome >0 
